@@ -81,8 +81,8 @@ def Least_squares_approx_wLR(xw, yw, n):
     for i in range(len(result)):
         y_values += result[i] * (x_values ** i)
 
-    plt.scatter(xw, yw, label='Punkty')
-    plt.plot(x_values, y_values, color='red', label='Wielomian aproksymowanyy')
+    plt.scatter(xw, yw, label='Points')
+    plt.plot(x_values, y_values, color='red', label='Approximate polynomial')
     plt.xlabel('x')
     plt.ylabel('y')
     plt.legend()
