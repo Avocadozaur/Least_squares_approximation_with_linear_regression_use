@@ -25,9 +25,9 @@ n = 2
 def Least_squares_approx_wLR(x, y, n):
     n += 1
     if n < 2:
-        return ("n can't be less than 2")
+        return "n can't be less than 2"
     if len(x) != len(y):
-        return ("not equal set of coefficients")
+        return "not equal set of coefficients"
     def Buckets():
     #my idea for implementing a matrix with subsequent powers of x diagonally
     #simple implementation of the linear regression formula
