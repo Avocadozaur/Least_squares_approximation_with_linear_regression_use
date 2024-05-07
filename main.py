@@ -30,7 +30,7 @@ def Least_squares_approx_wLR(xw, yw, n):
         return ("źle")
     def Buckets():
     #my idea for implementing a matrix with subsequent powers of x diagonally
-    #it comes from the linear regression formulas: y=a0+a1*x+a2*x^2...an*x^n
+    #simple implementation of the linear regression formula
         Buckets = []
         for i in range(2 * n - 1):
             Buckets.append([])
