@@ -20,9 +20,9 @@ import matplotlib.pyplot as plt
 # xw = [-3.0, 1.0, 2.0, 4.0, 0.0]
 # yw = [0.0, 0.0, 0.0, 0.0, -24.0]
 # n = 5
-xw = np.array([-1, 0, 1, 2,5])
-yw = np.array([4, -1, 0, 7,0])
-n = 4
+xw = np.array([-1, 0, 1, 2])
+yw = np.array([4, -1, 0, 7])
+n = 2
 
 
 def AproxSr2(xw, yw, n):
@@ -31,7 +31,7 @@ def AproxSr2(xw, yw, n):
         return ("źle")
     if len(xw) != len(yw):
         return ("źle")
-    #zrobiłem wiaderka na piramidkę z liczb która zawsze się będzie układać xD
+    #zrobiłem wiaderka na piramidkę z liczb która zawsze się będzie układać
     #chodzi o te same liczby na przekątnych żeby się do macierzy wpisywały
     #od x^0 do x^n, komicznie jest gdzieniegdzie zaimplementowane ale to działająca wersja alfa
     Buckets = []
@@ -63,17 +63,13 @@ def AproxSr2(xw, yw, n):
                 suma += listaY[i] * math.pow(listaX[i], stopien)
         return suma
 
-    counter = 1
+    counter = 0
     for bucket in Buckets:
-        if bucket == [0]:
-            M[0][0] = len(xw)
-        else:
-
-            for num in bucket:
+        for num in bucket:
                 a = num % n
                 b = num // n
                 M[b][a] = SumowanieX(xw, counter)
-            counter += 1
+        counter += 1
     counter = 0
     W = np.zeros((1, n))
     for i in range(n):
