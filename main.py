@@ -25,7 +25,7 @@ yw = np.array([4, -1, 0, 7])
 n = 2
 
 
-def AproxSr2(xw, yw, n):
+def AproksymacjaSr2LR(xw, yw, n):
     n+=1
     if n < 2:
         return ("źle")
@@ -93,4 +93,4 @@ def AproxSr2(xw, yw, n):
     return result
 
 
-print(AproxSr2(xw, yw, n))
+print(AproksymacjaSr2LR(xw, yw, n))
